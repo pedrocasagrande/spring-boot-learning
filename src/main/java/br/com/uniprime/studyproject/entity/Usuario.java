@@ -1,7 +1,6 @@
 package br.com.uniprime.studyproject.entity;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -15,6 +14,15 @@ public class Usuario {
 
     @ManyToMany
     private Set<Perfil> perfis;
+
+    public Usuario(String nome, String email) {
+        this.nome = nome;
+        this.email = email;
+    }
+
+    public Usuario() {
+
+    }
 
     public Long getId() {
         return id;
